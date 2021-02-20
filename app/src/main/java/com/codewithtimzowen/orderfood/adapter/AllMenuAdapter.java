@@ -25,6 +25,8 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
     @Override
     public AllMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 //        return new AllMenuViewHolder(view)
+
+        return null;
     }
 
     @Override
