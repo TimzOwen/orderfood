@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/popular1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/popular_name_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,4 +26,47 @@
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/popular_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/popular_name_name"
+        app:layout_constraintTop_toBottomOf="@+id/popular_name_name" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/popular_note"
+        app:layout_constraintTop_toBottomOf="@+id/popular_note"
+        app:srcCompat="@drawable/like_food" />
+
+    <TextView
+        android:id="@+id/popular_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="4.0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/popular_deliveryTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/time_bg"
+        android:text="30Mins"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/popular_rating"
+        app:layout_constraintStart_toEndOf="@+id/popular_rating"
+        app:layout_constraintTop_toTopOf="@+id/popular_rating" />
 </androidx.constraintlayout.widget.ConstraintLayout>
