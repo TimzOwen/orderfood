@@ -1,12 +1,14 @@
 package com.codewithtimzowen.orderfood.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codewithtimzowen.orderfood.R;
 import com.codewithtimzowen.orderfood.model.Allmenu;
 
 import java.util.List;
@@ -24,9 +26,10 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
     @NonNull
     @Override
     public AllMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        return new AllMenuViewHolder(view)
 
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.allmenu_recycler_items,parent,false);
+
+        return new AllMenuViewHolder(view);
     }
 
     @Override
