@@ -44,7 +44,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/popular_note"
         app:layout_constraintTop_toBottomOf="@+id/popular_note"
-        app:srcCompat="@drawable/like_food" />
+        app:srcCompat="@drawable/like_food"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/popular_rating"

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,8 +46,13 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
 
     public static class AllMenuViewHolder extends RecyclerView.ViewHolder{
 
+        TextView popularName, popularNote, popularRating,popularTime,popularCharges,popularPrice;
+        ImageView popularImageView;
+
         public AllMenuViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            //work on the code here
         }
     }
 
