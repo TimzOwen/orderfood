@@ -1,2 +1,2 @@
 # orderfood
-Delivry application
+Delivery application
