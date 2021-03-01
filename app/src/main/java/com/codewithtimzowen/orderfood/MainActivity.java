@@ -79,4 +79,7 @@ public class MainActivity extends AppCompatActivity {
         recommendedRecyclerView.setAdapter(recommendedAdpater);
 
     }
+
+    //updated the paymenys for Paypal from M-pesa
+
 }
