@@ -58,14 +58,13 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
 
         public AllMenuViewHolder(@NonNull View itemView) {
             super(itemView);
-//            //work on the code here
-//            popularName = itemView.findViewById(R.id.popular_name);
-//            popularNote = itemView.findViewById(R.id.popular_note);
-//            popularRating = itemView.findViewById(R.id.popular_rating);
-//            popularCharges = itemView.findViewById(R.id.popular_delivery_charge);
-//            popularTime = itemView.findViewById(R.id.popular_deliveryTime);
-//            popularPrice = itemView.findViewById(R.id.popular_price);
-//            popularImageView = itemView.findViewById(R.id.popular_image);
+            popularName = itemView.findViewById(R.id.popular_name);
+            popularNote = itemView.findViewById(R.id.popular_note);
+            popularRating = itemView.findViewById(R.id.popular_rating);
+            popularCharges = itemView.findViewById(R.id.popular_delivery_charge);
+            popularTime = itemView.findViewById(R.id.popular_deliveryTime);
+            popularPrice = itemView.findViewById(R.id.popular_price);
+            popularImageView = itemView.findViewById(R.id.popular_image);
 
         }
     }
