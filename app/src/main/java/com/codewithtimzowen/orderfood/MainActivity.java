@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     PopularAdapter popularAdapter;
     RecommendedAdpater recommendedAdpater;
 
-    RecyclerView popularRecyclerView, recommendedRecyclerView, PopularRecyclerView;
+    RecyclerView popularRecyclerView, recommendedRecyclerView, allMenuRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
