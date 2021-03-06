@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.codewithtimzowen.orderfood.R;
 import com.codewithtimzowen.orderfood.model.Allmenu;
 
@@ -33,10 +34,16 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
 
         return new AllMenuViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull AllMenuViewHolder holder, int position) {
+//        holder.popularName.setText(allmenuList.get(position).getName());
+//        holder.popularPrice.setText(allmenuList.get(position).getPrice());
+//        holder.popularTime.setText(allmenuList.get(position).getDeliveryTime());
+//        holder.popularRating.setText(allmenuList.get(position).getRating());
+//        holder.popularCharges.setText(allmenuList.get(position).getDeliveryCharges());
+//        holder.popularNote.setText(allmenuList.get(position).getNote());
 
+        Glide.with(context).load(allmenuList.get(position).getImageUrl()).into(holder.popularImageView);
     }
 
     @Override
@@ -51,8 +58,15 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
 
         public AllMenuViewHolder(@NonNull View itemView) {
             super(itemView);
+//            //work on the code here
+//            popularName = itemView.findViewById(R.id.popular_name);
+//            popularNote = itemView.findViewById(R.id.popular_note);
+//            popularRating = itemView.findViewById(R.id.popular_rating);
+//            popularCharges = itemView.findViewById(R.id.popular_delivery_charge);
+//            popularTime = itemView.findViewById(R.id.popular_deliveryTime);
+//            popularPrice = itemView.findViewById(R.id.popular_price);
+//            popularImageView = itemView.findViewById(R.id.popular_image);
 
-            //work on the code here
         }
     }
 
