@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.codewithtimzowen.orderfood.adapter.AllMenuAdapter;
 import com.codewithtimzowen.orderfood.adapter.PopularAdapter;
 import com.codewithtimzowen.orderfood.adapter.RecommendedAdpater;
+import com.codewithtimzowen.orderfood.model.Allmenu;
 import com.codewithtimzowen.orderfood.model.FoodData;
 import com.codewithtimzowen.orderfood.model.Popular;
 import com.codewithtimzowen.orderfood.model.Recommended;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     PopularAdapter popularAdapter;
     RecommendedAdpater recommendedAdpater;
+    AllMenuAdapter allMenuAdapter;
 
     RecyclerView popularRecyclerView, recommendedRecyclerView, allMenuRecyclerView;
 
@@ -69,16 +72,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void getRecommendedData (List <Recommended> recommendedList) {
-
+    private void getRecommendedData(List <Recommended> recommendedList) {
         recommendedRecyclerView = findViewById(R.id.recommended_recycler);
         recommendedAdpater = new RecommendedAdpater(this, recommendedList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recommendedRecyclerView.setLayoutManager(layoutManager);
         recommendedRecyclerView.setAdapter(recommendedAdpater);
-
     }
-
-    //updated the paymenys for Paypal from M-pesa
-
+    private void getAllMenu(List <Allmenu> allmenuList) {
+        allMenuRecyclerView = findViewById(R.id.all_menu_recycler);
+        allMenuAdapter = new AllMenuAdapter(this, allmenuList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        allMenuRecyclerView.setLayoutManager(layoutManager);
+        allMenuRecyclerView.setAdapter(recommendedAdpater);
+    }
 }
