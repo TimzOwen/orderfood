@@ -36,12 +36,12 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
     }
     @Override
     public void onBindViewHolder(@NonNull AllMenuViewHolder holder, int position) {
-//        holder.popularName.setText(allmenuList.get(position).getName());
-//        holder.popularPrice.setText(allmenuList.get(position).getPrice());
-//        holder.popularTime.setText(allmenuList.get(position).getDeliveryTime());
-//        holder.popularRating.setText(allmenuList.get(position).getRating());
-//        holder.popularCharges.setText(allmenuList.get(position).getDeliveryCharges());
-//        holder.popularNote.setText(allmenuList.get(position).getNote());
+        holder.popularName.setText(allmenuList.get(position).getName());
+        holder.popularPrice.setText(allmenuList.get(position).getPrice());
+        holder.popularTime.setText(allmenuList.get(position).getDeliveryTime());
+        holder.popularRating.setText(allmenuList.get(position).getRating());
+        holder.popularCharges.setText(allmenuList.get(position).getDeliveryCharges());
+        holder.popularNote.setText(allmenuList.get(position).getNote());
 
         Glide.with(context).load(allmenuList.get(position).getImageUrl()).into(holder.popularImageView);
     }
