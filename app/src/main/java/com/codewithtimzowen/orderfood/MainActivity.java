@@ -84,6 +84,6 @@ public class MainActivity extends AppCompatActivity {
         allMenuAdapter = new AllMenuAdapter(this, allmenuList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         allMenuRecyclerView.setLayoutManager(layoutManager);
-        allMenuRecyclerView.setAdapter(recommendedAdpater);
+        allMenuRecyclerView.setAdapter(allMenuAdapter);
     }
 }

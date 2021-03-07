@@ -1,6 +1,7 @@
 package com.codewithtimzowen.orderfood.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.codewithtimzowen.orderfood.FoodDetails;
 import com.codewithtimzowen.orderfood.R;
 import com.codewithtimzowen.orderfood.model.Recommended;
 
@@ -43,6 +45,19 @@ public class RecommendedAdpater extends RecyclerView.Adapter<RecommendedAdpater.
         holder.getRecommendedPrice.setText("Ksh:" + recommendedList.get(position).getPrice());
 
         Glide.with(context).load(recommendedList.get(position).getImageUrl()).into(holder.recommendedImage);
+
+        //set onClick Listener
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent foodDetails = new Intent(context, FoodDetails.class);
+                foodDetails.putExtra("name",recommendedList.get(position).getName());
+                foodDetails.putExtra("price",recommendedList.get(position).getPrice());
+                foodDetails.putExtra("image",recommendedList.get(position).getImageUrl());
+
+                context.startActivity(foodDetails); // start the activity from the current context
+            }
+        });
     }
 
     @Override

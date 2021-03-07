@@ -1,6 +1,7 @@
 package com.codewithtimzowen.orderfood.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.codewithtimzowen.orderfood.FoodDetails;
 import com.codewithtimzowen.orderfood.R;
 import com.codewithtimzowen.orderfood.model.Allmenu;
 
@@ -44,6 +46,21 @@ public class AllMenuAdapter extends RecyclerView.Adapter<AllMenuAdapter.AllMenuV
         holder.popularNote.setText(allmenuList.get(position).getNote());
 
         Glide.with(context).load(allmenuList.get(position).getImageUrl()).into(holder.popularImageView);
+
+        //set onClick Listener
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent foodDetails = new Intent(context, FoodDetails.class);
+                foodDetails.putExtra("name",allmenuList.get(position).getName());
+                foodDetails.putExtra("price",allmenuList.get(position).getPrice());
+                foodDetails.putExtra("rating",allmenuList.get(position).getRating());
+                foodDetails.putExtra("image",allmenuList.get(position).getImageUrl());
+
+                context.startActivity(foodDetails); // start the activity from the current context
+            }
+        });
+
     }
 
     @Override
