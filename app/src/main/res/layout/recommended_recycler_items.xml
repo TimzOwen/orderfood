@@ -42,7 +42,8 @@
         app:layout_constraintEnd_toStartOf="@+id/recommended_rating"
         app:layout_constraintStart_toStartOf="@+id/recommended_name"
         app:layout_constraintTop_toBottomOf="@+id/recommended_name"
-        app:srcCompat="@drawable/like_food" />
+        app:srcCompat="@drawable/like_food"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/recommended_rating"
