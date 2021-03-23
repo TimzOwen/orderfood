@@ -19,8 +19,8 @@ import com.codewithtimzowen.orderfood.model.Popular;
 import java.util.List;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularViewHolder> {
-    private Context context;
-    private List<Popular> popularList;
+    private final Context context;
+    private final List<Popular> popularList;
 
     public PopularAdapter(Context context, List<Popular> popularList) {
         this.context = context;
@@ -31,9 +31,6 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularV
     @Override
     public PopularViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.popula_recycler_items,parent,false);
-
-
-
         return new PopularViewHolder(view);
     }
 
